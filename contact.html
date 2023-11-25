@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color:rgb(181, 180, 180) ;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        h1 {
+            text-align: center;
+            color: #020202; /* Dark text color */
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        .institution-info {
+            margin-bottom: 20px;
+        }
+
+        /* Style the institution info with icons */
+        .institution-info p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #050505; /* Slightly darker text color */
+        }
+
+        /* Style the contact links with Font Awesome icons */
+        .institution-info a {
+            text-decoration: none;
+            color: #007BFF; /* Primary link color */
+        }
+
+        /* Add a hover effect to links */
+        .institution-info a:hover {
+            text-decoration: underline;
+        }
+
+        p.contact-us {
+            text-align: center;
+            margin-top: 20px;
+            color: #010101; /* Slightly lighter text color */
+        }
+
+        /* Change the background color of input elements */
+        input[type="text"],
+        input[type="email"] {
+            background-color: #ff5733; /* Change to your desired background color */
+        }
+
+        /* Change the text color of input elements */
+        input[type="text"],
+        input[type="email"] {
+            color: #ffffff; /* Change to your desired text color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Details:</h1>
+        <div class="institution-info">
+            <p>
+                <i class="fas fa-university"></i>
+                Institution Name: Dayananda Sagar University
+            </p>
+            <p>
+                <i class="fas fa-envelope"></i>
+                Contact Email: <a href="mailto:demo@example.com">dsu@dsu.edu.in</a>
+            </p>
+            <p>
+                <i class="fas fa-phone"></i>
+                Phone Number: 8795828234
+            </p>
+            <p>
+                <i class="fas fa-map-marker-alt"></i>
+                Address: kudlu gate,hosur road,BENGALURU-560068
+            </p>
+        </div>
+        <p class="contact-us">If you have any questions or inquiries, please feel free to <a href="contact.html">contact us</a> using the provided information.</p>
+    </div>
+</body>
+</html>
