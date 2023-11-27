@@ -31,14 +31,14 @@
     <style>
         #profileDialog {
             display: none;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 20px;
+            background-color:transparent
+            border:transparent
+            padding: 0px;
             border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 40px;
+            right: -400px;
         }
 
         #profileDialog h2 {
@@ -188,7 +188,7 @@
         <!-- Replace "your-image.jpg" with the actual path to your image and set the width as needed -->
         <div class="progress-container">
             <!-- Change the background-color to the desired color (e.g., green) -->
-            <div class="progress-bar" style="width: 16.89%; background-color: rgb(6, 249, 6);">100%</div>
+            <div class="progress-bar" style="width: 14%; background-color: rgb(6, 249, 6);">100%</div>
         </div>
     </div>
     <style>
@@ -474,6 +474,18 @@
    
 
     <!-- Profile Dialog (hidden by default) -->
+<<<<<<< HEAD
+<div id="profileDialog" class="container mt-1">
+    <div class="row justify-content-center">
+        <div class="col-lg-3 profile-container" style="background-color: #1b1b1c; border-radius: 10px; padding: 20px;">
+            <h2 class="text-center mb-4" style="color: #ffa600;">PROFILE</h2>
+            <!-- You can add user profile information here -->
+            <p><strong>Name:</strong> Sahana roy</p>
+            <p><strong>Email:</strong> sahana@example.com</p>
+            <p><strong>Role:</strong> Student</p>
+            <p><strong>Topic:</strong> Neurology</p>
+            <p><strong>Mentor:</strong> Dr. Esther Lal</p>
+=======
     <div id="profileDialog" class="container mt-1">
         <div class="row justify-content-center">
             <div class="col-lg-3">
@@ -484,16 +496,17 @@
                 <p>Role: Student</p>
                 <p> Topic:Neurology</p>
                 <p>Mentor: Dr.Esther Lal</p>
+>>>>>>> df5fb7b8ef88cdad8fc311000a47115f56f57734
 
-                
-                <!-- Logout button to log the user out and redirect to the signup page -->
-                <button id="logoutButton" class="btn btn-danger btn-block">Logout</button>
+            <!-- Logout button to log the user out and redirect to the signup page -->
+            <button id="logoutButton" class="btn btn-danger btn-block">Logout</button>
 
-                <!-- Close button to hide the dialog -->
-                <button id="closeProfileDialog" class="btn btn-danger btn-block">Close</button>
-            </div>
+            <!-- Close button to hide the dialog -->
+            <button id="closeProfileDialog" class="btn btn-secondary btn-block mt-3">Close</button>
         </div>
     </div>
+</div>
+
 
     <!-- Include Font Awesome for the plus icon -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css" rel="stylesheet">
