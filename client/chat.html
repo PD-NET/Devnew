@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... (your existing head content) ... -->
+</head>
+<body>
+    <!-- ... (your existing body content) ... -->
+    
+    <!-- Chatbot Image Button (replace 'your-image.png' with the path to your button image) -->
+    <img id="chatbotImageButton" src="image/63346116314f36763c7428ad_Dialogflow.png" height="50" width="50" alt="Chatbot" style="position: fixed; bottom: 20px; right: 20px; cursor: pointer;">
+
+    <!-- Chatbot Popup (hidden by default) -->
+    <div id="chatbotPopup" style="display: none; position: fixed; bottom: 20px; right: 20px;">
+        <!-- Back Arrow -->
+        <button id="closeChatbotButton" class="btn btn-primary">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+
+        <!-- Chatbot iframe -->
+        <iframe src="https://console.dialogflow.com/api-client/demo/embedded/d21c3d6a-85de-4840-899d-d8c59b762e61"
+            width="300" height="400" allow="microphone;"></iframe>
+    </div>
+
+    <!-- ... (your existing body content) ... -->
+
+    <script>
+        // JavaScript to handle chatbot popup
+        document.addEventListener("DOMContentLoaded", function () {
+            const chatbotImageButton = document.getElementById("chatbotImageButton");
+            const chatbotPopup = document.getElementById("chatbotPopup");
+            const closeChatbotButton = document.getElementById("closeChatbotButton");
+
+            chatbotImageButton.addEventListener("click", function () {
+                // Show the chatbot popup
+                chatbotPopup.style.display = "block";
+            });
+
+            closeChatbotButton.addEventListener("click", function () {
+                // Close the chatbot popup
+                chatbotPopup.style.display = "none";
+            });
+        });
+    </script>
+
+    <!-- ... (your existing scripts) ... -->
+</body>
+</html>
