@@ -31,14 +31,14 @@
     <style>
         #profileDialog {
             display: none;
-            background-color:transparent
-            border:transparent
-            padding: 0px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
             border-radius: 5px;
-        
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             position: fixed;
-            top: 40px;
-            right: -400px;
+            top: 20px;
+            right: 20px;
         }
 
         #profileDialog h2 {
@@ -128,7 +128,7 @@
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     
                     <a href="fb.html" class="nav-item nav-link">Feedback</a>
-                    <a href="cat2.html" class="nav-item nav-link">Category</a>
+                    <a href="cat.html" class="nav-item nav-link">Category</a>
                     <div class="nav-item dropdown">
                         <!-- Dropdown Menu Content -->
                     </div>
@@ -188,7 +188,7 @@
         <!-- Replace "your-image.jpg" with the actual path to your image and set the width as needed -->
         <div class="progress-container">
             <!-- Change the background-color to the desired color (e.g., green) -->
-            <div class="progress-bar" style="width: 14%; background-color: rgb(6, 249, 6);">100%</div>
+            <div class="progress-bar" style="width: 16.89%; background-color: rgb(6, 249, 6);">100%</div>
         </div>
     </div>
     <style>
@@ -236,7 +236,7 @@
    
     <div class="contai">
         <!-- Add an image here -->
-        <img src="image/download.jpg" alt="Your Image Description" height="220"width="200">
+        <img src="image/Clark-et-al.-Reframing-postconcussional-syndrome-as-an-interfac.jpg" alt="Your Image Description" height="220"width="200">
         <!-- Replace "your-image.jpg" with the actual path to your image and set the width as needed -->
         <div class="progress-container">
             <!-- Change the background-color to the desired color (e.g., green) -->
@@ -262,7 +262,7 @@
    
     <div class="conta">
         <!-- Add an image here -->
-        <img src="image/6565Neurology.jpg" alt="Your Image Description" height="220"width="200">
+        <img src="image/Clark-et-al.-Reframing-postconcussional-syndrome-as-an-interfac.jpg" alt="Your Image Description" height="220"width="200">
         <!-- Replace "your-image.jpg" with the actual path to your image and set the width as needed -->
         <div class="progress-container">
             <!-- Change the background-color to the desired color (e.g., green) -->
@@ -285,111 +285,6 @@
             margin-left: 0; /* Remove margin for the progress container */
         }
     </style>
-    <!-- Right Arrow (adjust the styling as needed) -->
-<!-- Right Arrow Button with Orange Background -->
-<!-- Right Arrow Button with Orange Background -->
-<button id="rightArrowButton" style="position: fixed; bottom: 250px; right: 30px; cursor: pointer; font-size: 24px; color: #fff; background-color: #ff8c00; border: 1px solid #ff8c00; border-radius: 5px; padding: 5px 10px;">
-    ➔
-</button>
-
-<!-- Popup Window (hidden by default) -->
-<div id="popupWindow" style="display: none; position: fixed; bottom: 300px; right: 500px; width: 600px; height: 300px; background-color: #fff; border: 1px solid #ccc; padding: 20px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">
-    <h2>Popup Window Content</h2>
-    <!-- Add your content here -->
-    <p>This is the content of the popup window.</p>
-
-    <!-- Add Documents Button -->
-    <button id="addDocumentsButton" style="background-color: #007bff; color: #fff; border: 1px solid #007bff; border-radius: 5px; padding: 10px;">
-        Add Documents
-    </button>
-
-    <!-- Submit Button -->
-    <button id="submitButton" style="background-color: #28a745; color: #fff; border: 1px solid #28a745; border-radius: 5px; padding: 10px; margin-right: 10px;">
-        Submit
-    </button>
-
-    <!-- Close Button -->
-    <button id="closePopupButton" style="position: absolute; bottom: 20px; right: 20px; padding: 10px;">Close</button>
-
-    <!-- Submitted Message -->
-    <div id="submittedMessage" style="display: none; margin-top: 20px; margin-left:200px; color: #28a745; font-size: 16px;">
-      Submitted Successfully!
-    </div>
-</div>
-
-<script>
-    // JavaScript to handle the right arrow button click and show the popup window
-    document.addEventListener("DOMContentLoaded", function () {
-        const rightArrowButton = document.getElementById("rightArrowButton");
-        const popupWindow = document.getElementById("popupWindow");
-        const closePopupButton = document.getElementById("closePopupButton");
-        const submitButton = document.getElementById("submitButton");
-        const addDocumentsButton = document.getElementById("addDocumentsButton");
-        const submittedMessage = document.getElementById("submittedMessage");
-
-        rightArrowButton.addEventListener("click", function () {
-            // Show the popup window
-            popupWindow.style.display = "block";
-        });
-
-        closePopupButton.addEventListener("click", function () {
-            // Close the popup window
-            popupWindow.style.display = "none";
-        });
-
-        submitButton.addEventListener("click", function () {
-            // Display the submitted message
-            submittedMessage.style.display = "block";
-        });
-
-        addDocumentsButton.addEventListener("click", function () {
-            // Trigger the file input click to open file explorer
-            document.getElementById("fileInput").click();
-        });
-    });
-</script>
-
-
-<script>
-    // JavaScript to handle the right arrow button click and show the popup window
-    document.addEventListener("DOMContentLoaded", function () {
-        const rightArrowButton = document.getElementById("rightArrowButton");
-        const popupWindow = document.getElementById("popupWindow");
-        const closePopupButton = document.getElementById("closePopupButton");
-
-        rightArrowButton.addEventListener("click", function () {
-            // Show the popup window
-            popupWindow.style.display = "block";
-        });
-
-        closePopupButton.addEventListener("click", function () {
-            // Close the popup window
-            popupWindow.style.display = "none";
-        });
-    });
-</script>
-
-
-<script>
-    // JavaScript to handle the right arrow button click and show the popup window
-    document.addEventListener("DOMContentLoaded", function () {
-        const rightArrowButton = document.getElementById("rightArrowButton");
-        const popupWindow = document.getElementById("popupWindow");
-        const closePopupButton = document.getElementById("closePopupButton");
-
-        rightArrowButton.addEventListener("click", function () {
-            // Show the popup window
-            popupWindow.style.display = "block";
-        });
-
-        closePopupButton.addEventListener("click", function () {
-            // Close the popup window
-            popupWindow.style.display = "none";
-        });
-    });
-</script>
-
-
    
     <div class="cont">
         <!-- Add an image here -->
@@ -438,7 +333,7 @@
         <div id="chatbotPopup" style="display: none; position: fixed; bottom: 20px; right: 20px;">
             <!-- Back Arrow -->
             <button id="closeChatbotButton" class="btn btn-primary">
-                <i class="fas fa-arrow-left"></i> back
+                <i class="fas fa-arrow-left"></i> Back
             </button>
     
             <!-- Chatbot iframe -->
@@ -474,56 +369,26 @@
    
 
     <!-- Profile Dialog (hidden by default) -->
-
-<div id="profileDialog" class="container mt-1">
-    <div class="row justify-content-center">
-        <div class="col-lg-3 profile-container" style="background-color: #1b1b1c; border-radius: 10px; padding: 20px;">
-            <h2 class="text-center mb-4" style="color: #ffa600;">PROFILE</h2>
-            <!-- You can add user profile information here -->
-            <p><strong>Name:</strong> Sahana roy</p>
-            <p><strong>Email:</strong> sahana@example.com</p>
-            <p><strong>Role:</strong> Student</p>
-            <p><strong>Topic:</strong> Neurology</p>
-            <p><strong>Mentor:</strong> Dr. Esther Lal</p>
-<<<<<<< HEAD
-
-               <!-- Logout button to log the user out and redirect to the signup page -->
-             <button id="logoutButton" class="btn btn-danger btn-block">Logout</button>
-
-=======
-<<<<<<< HEAD
-              
-    
-
- <!-- Logout button to log the user out and redirect to the signup page -->
- <button id="logoutButton" class="btn btn-danger btn-block">Logout</button>
-=======
-<<<<<<< HEAD
-               <!-- Logout button to log the user out and redirect to the signup page -->
-             <button id="logoutButton" class="btn btn-danger btn-block">Logout</button>
-=======
-=======
     <div id="profileDialog" class="container mt-1">
         <div class="row justify-content-center">
             <div class="col-lg-3">
                 <h2 class="text-center">Profile</h2>
                 <!-- You can add user profile information here -->
-                <p>Name: SahanaRoy</p>
-                <p>Email:sahanarOO@example.com</p>
-                <p>Role: Students</p>
+                <p>Name: Sahana Roy</p>
+                <p>Email:sahanaroy@example.com</p>
+                <p>Role: Student</p>
                 <p> Topic:Neurology</p>
                 <p>Mentor: Dr.Esther Lal</p>
->>>>>>> df5fb7b8ef88cdad8fc311000a47115f56f57734
->>>>>>> dfdf92b9b3a337eb336b49e20b48d8f0b12b46df
->>>>>>> 76d1b788bcf0ccad6f5f8d5d96c372b5c3925acb
->>>>>>> c8eaf6e293630df4acc2f71727303f97b6ccb436
 
-             <!-- Close button to hide the dialog -->
-             <button id="closeProfileDialog" class="btn btn-secondary btn-block mt-3">Close</button>
+                
+                <!-- Logout button to log the user out and redirect to the signup page -->
+                <button id="logoutButton" class="btn btn-danger btn-block">Logout</button>
+
+                <!-- Close button to hide the dialog -->
+                <button id="closeProfileDialog" class="btn btn-danger btn-block">Close</button>
+            </div>
         </div>
     </div>
-</div>
-
 
     <!-- Include Font Awesome for the plus icon -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css" rel="stylesheet">
