@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Course Selection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d1e6f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            background-color: white;
+            color: #d2b48c;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px 0;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #selectedCourses {
+            margin-top: 20px;
+        }
+
+        #selectedCourses h2 {
+            color: #333;
+        }
+
+        #selectedCourses ul {
+            list-style: disc;
+            margin-left: 20px;
+            color: #333;
+        }
+
+        #selectedCourses li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Alternative Course</h1>
+        <form id="courseSelectionForm">
+            <ul>
+                <li>
+                    <label>
+                        <input type="radio" name="courses" value="Abortion"> Abortion
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="courses" value="Traumatic Brain Injury"> Traumatic Brain Injury
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="courses" value="Genetics"> Genetics
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="courses" value="Insulin Resistance"> Insulin Resistance
+                    </label>
+                </li>
+                <!-- Add more courses as needed -->
+            </ul>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+        <div id="selectedCourses">
+            <!-- Selected courses will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById("courseSelectionForm");
+            const selectedCourse = form.querySelector('input[type="radio"]:checked');
+
+            // Display selected course
+            const selectedCoursesDiv = document.getElementById("selectedCourses");
+            selectedCoursesDiv.innerHTML = "<h2>Selected Course:</h2>";
+            
+            if (selectedCourse) {
+                selectedCoursesDiv.innerHTML += "<p>" + selectedCourse.value + "</p>";
+            } else {
+                selectedCoursesDiv.innerHTML += "<p>No course selected.</p>";
+            }
+        }
+    </script>
+</body>
+</html>

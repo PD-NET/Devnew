@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PDF Links with Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .pdf-links {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .pdf-link-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .pdf-link-image {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+
+        .pdf-link-text {
+            flex-grow: 1;
+        }
+
+        .pdf-link-text a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .pdf-link-text a:hover {
+            text-decoration: underline;
+        }
+
+        .pdf-link-download {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pdf-links">
+        <div class="pdf-link-item">
+            <img class="pdf-link-image" src="image/sc1.png" alt="PDF Image 1">
+            <div class="pdf-link-text">
+                <p><a href="temp1.pdf" target="_blank">PDF File 1</a></p>
+                <p class="pdf-link-download">(<a href="temp1.pdf" download>Download</a>)</p>
+            </div>
+        </div>
+        <div class="pdf-link-item">
+            <img class="pdf-link-image" src="image/sc2.png" alt="PDF Image 2">
+            <div class="pdf-link-text">
+                <p><a href="pdf/temp2.pdf" target="_blank">PDF File 2</a></p>
+                <p class="pdf-link-download">(<a href="pdf/temp2.pdf" download>Download</a>)</p>
+            </div>
+        </div>
+       
+        <!-- Add more PDF links as needed -->
+    </div>
+</body>
+</html>
