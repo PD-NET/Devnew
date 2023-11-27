@@ -7,20 +7,25 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #d1e6f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .container {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
+            padding: 40px;
+            background-color: white;
+            color: #d2b48c;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
         }
 
         h1 {
-            text-align: center;
             color: #333;
         }
 
@@ -30,20 +35,28 @@
         }
 
         li {
-            margin: 10px 0;
+            margin: 15px 0;
         }
 
         label {
-            display: block;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
         }
 
         button {
-            background-color: #007BFF;
+            
             color: #fff;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
@@ -65,33 +78,33 @@
         }
 
         #selectedCourses li {
-            margin: 5px 0;
+            margin: 8px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Select Alternative Courses</h1>
+        <h1>Select Alternative Course</h1>
         <form id="courseSelectionForm">
             <ul>
                 <li>
                     <label>
-                        <input type="checkbox" name="courses" value="math"> Abortion
+                        <input type="radio" name="courses" value="Abortion"> Abortion
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" name="courses" value="science"> Traumatic Brain Injury
+                        <input type="radio" name="courses" value="Traumatic Brain Injury"> Traumatic Brain Injury
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" name="courses" value="history"> Genetics
+                        <input type="radio" name="courses" value="Genetics"> Genetics
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input type="checkbox" name="courses" value="history"> Insulin Resistance
+                        <input type="radio" name="courses" value="Insulin Resistance"> Insulin Resistance
                     </label>
                 </li>
                 <!-- Add more courses as needed -->
@@ -106,27 +119,16 @@
     <script>
         function submitForm() {
             const form = document.getElementById("courseSelectionForm");
-            const selectedCourses = [];
+            const selectedCourse = form.querySelector('input[type="radio"]:checked');
 
-            // Get all selected checkboxes
-            const checkboxes = form.querySelectorAll('input[type="checkbox"]:checked');
-
-            // Extract the values of selected checkboxes
-            checkboxes.forEach(function (checkbox) {
-                selectedCourses.push(checkbox.value);
-            });
-
-            // Display selected courses
+            // Display selected course
             const selectedCoursesDiv = document.getElementById("selectedCourses");
-            selectedCoursesDiv.innerHTML = "<h2>Selected Courses:</h2>";
-            if (selectedCourses.length === 0) {
-                selectedCoursesDiv.innerHTML += "<p>No courses selected.</p>";
+            selectedCoursesDiv.innerHTML = "<h2>Selected Course:</h2>";
+            
+            if (selectedCourse) {
+                selectedCoursesDiv.innerHTML += "<p>" + selectedCourse.value + "</p>";
             } else {
-                selectedCoursesDiv.innerHTML += "<ul>";
-                selectedCourses.forEach(function (course) {
-                    selectedCoursesDiv.innerHTML += "<li>" + course + "</li>";
-                });
-                selectedCoursesDiv.innerHTML += "</ul>";
+                selectedCoursesDiv.innerHTML += "<p>No course selected.</p>";
             }
         }
     </script>
