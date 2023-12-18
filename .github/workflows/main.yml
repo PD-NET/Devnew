@@ -20,9 +20,9 @@ jobs:
       - name: README file
         uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
         env:
-         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_TOKEN}} # Use the correct environment variable name
+         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_TOKEN }} # Use the correct environment variable name
         with:
-          source_file: 'README.md'
+          source_file: '.github/workflows'
           destination_repo: 'PD-NET/test'
           user_email: 'eng21ct0006@dsu.edu.in'
           user_name: 'Gaurang-dsu'
@@ -30,21 +30,30 @@ jobs:
       - name: client code
         uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
         env:
-         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_TOKEN}} # Use the correct environment variable name
+         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_TOKEN }} # Use the correct environment variable name
         with:
-          source_file: 'client/'
+          source_file: '.vscode'
           destination_repo: 'PD-NET/test'
           user_email: 'eng21ct0006@dsu.edu.in'
           user_name: 'Gaurang-dsu'
 
-     
-
-      - name: css
+      - name: server code
         uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
         env:
-         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_TOKEN}} # Use the correct environment variable name
+         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_TOKEN }} # Use the correct environment variable name
+        with:
+          source_file: 'client'
+          destination_repo: 'PD-NET/test'
+          user_email: 'eng21ct0006@dsu.edu.in'
+          user_name: 'Gaurang-dsu'
+
+      - name: .DS_Store file
+        uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
+        env:
+         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_TOKEN }} # Use the correct environment variable name
         with:
           source_file: 'css'
           destination_repo: 'PD-NET/test'
           user_email: 'eng21ct0006@dsu.edu.in'
-          user_name: 'Gaurang-dsu'
+          user_name: 'Gaurang-dsu'
+          
