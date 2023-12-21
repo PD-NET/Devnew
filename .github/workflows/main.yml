@@ -30,7 +30,7 @@ jobs:
       - name: client code
         uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
         env:
-         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_TOKEN }} # Use the correct environment variable name
+         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
         with:
           source_file: 'client/'
           destination_repo: 'PD-Net/test'
@@ -40,7 +40,7 @@ jobs:
       - name: python file
         uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
         env:
-         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_TOKEN }} # Use the correct environment variable name
+         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
         with:
           source_file: 'hello.py'
           destination_repo: 'PD-Net/test'
