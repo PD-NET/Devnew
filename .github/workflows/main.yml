@@ -23,5 +23,9 @@ jobs:
 
     - name: Push to Destination Repo
       run: |
-        git remote add destination-repo https://<Gaurang-dsu>:<PAT_ACCESS_KEY>@github.com/PD-NET/test
+        git remote add destination-repo https://github.com/PD-NET/test.git
+        git remote -v
+        git branch -a
+        git show-ref
         git push destination-repo main
+
