@@ -13,7 +13,7 @@ jobs:
     - name: Checkout Source Repo
       uses: actions/checkout@v2
       with:
-        repository: PD-NET/devnew  # Replace 'owner/source-repo' with the source repository in the format 'owner/repo'
+        repository: PD-NET/Devnew  # Replace 'owner/source-repo' with the source repository in the format 'owner/repo'
         ref: main  # Replace 'main' with the branch you want to clone
 
     - name: Configure Git
