@@ -1,24 +1,27 @@
-name: Push File
+name: Push Content to Another Repo
 
-on: push
+on:
+  push:
+    branches:
+      - main  
 
 jobs:
-  copy-file:
+  push-content:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout
+    - name: Checkout Source Repo
       uses: actions/checkout@v2
-
-    - name: Pushes test file
-      uses: dmnemec/copy_file_to_another_repo_action@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }}
       with:
+        repository: PD-NET/devnew  # Replace 'owner/source-repo' with the source repository in the format 'owner/repo'
+        ref: main  # Replace 'main' with the branch you want to clone
 
-        source_file: '.vscode/.'
-        destination_repo: 'PD-NET/test'
-        
+    - name: Configure Git
+      run: |
+        git config --global user.email "eng21ct0006@dsu.edu.in"
+        git config --global user.name "Gaurang-dsu"
 
-        user_email: 'eng21ct0006@dsu.edu.in'
-        user_name: 'Gaurang-dsu'
-        commit_message: 'successful push to test'
+    - name: Push to Destination Repo
+      run: |
+        git remote add destination-repo https://github.com/PD-NET/test  # Replace 'owner/destination-repo' with the destination repository
+        git push destination-repo main  # Replace 'main' with the branch you want to push to in the destination repository
