@@ -23,5 +23,5 @@ jobs:
 
     - name: Push to Destination Repo
       run: |
-        git remote add destination-repo https://github.com/PD-NET/test  # Replace 'owner/destination-repo' with the destination repository
-        git push destination-repo main  # Replace 'main' with the branch you want to push to in the destination repository
+        git remote add destination-repo https://<Gaurang-dsu>:<PAT_ACCESS_KEY>@github.com/PD-NET/test
+        git push destination-repo main
