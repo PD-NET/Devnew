@@ -22,7 +22,7 @@ jobs:
       run: |
         destination_repo_1="https://github.com/PD-NET/test"
         git clone "$destination_repo_1" destination_1
-        cp -r * destination_1/
+        rsync -av --exclude=destination_1/* --exclude=.git/ * destination_1/
         cd destination_1
         git add .
         git commit -m "Automated update from source repository"
