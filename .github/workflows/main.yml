@@ -20,11 +20,10 @@ jobs:
 
     - name: Push to destination repository 1
       run: |
-       destination_repo_1="https://github.com/PD-NET/test.git"
-       git clone "$destination_repo_1" destination_1
-       cp -r !(destination_1) destination_1/
-       cd destination_1
-       git add .
-       git commit -m "Automated update from source repository"
-       git push origin main
-
+        destination_repo_1="https://github.com/PD-NET/test.git"
+        git clone "$destination_repo_1" destination_1
+        cp -r * destination_1/
+        cd destination_1
+        git add .
+        git commit -m "Automated update from source repository"
+        git push origin main
