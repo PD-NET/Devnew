@@ -1,38 +1,29 @@
-name: Push to Another Repository
+name: Push to Other Repos
 
 on:
   push:
     branches:
-      - main  # Replace with the source branch you want to trigger the workflow
-permissions: write-all
+      - main
+
 jobs:
-  push_code_from_test_to_prod:
+  push_to_repos:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      packages: write
-      pages: write 
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      
-      - name: .vscode
-        uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
-        env:
-         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
-        with:
-          source_file: '.vscode'
-          destination_repo: 'PD-NET/test'
-          user_email: 'eng21ct0006@dsu.edu.in'
-          user_name: 'Gaurang-dsu'
-            
-      - name: client
-        uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
-        env:
-         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
-        with:
-          source_file: 'client/'
-          destination_repo: 'PD-NET/test'
-          user_email: 'eng21ct0006@dsu.edu.in'
-          user_name: 'Gaurang-dsu'
+    - name: Checkout source repository
+      uses: actions/checkout@v2
+
+    - name: Set up Git credentials
+      run: |
+        git config user.email "eng21ct0006@dsu.edu.in"
+        git config user.name "Gaurang-dsu"
+
+    - name: Push to destination repository 1
+      run: |
+        destination_repo_1="https://github.com/PD-NET/test.git"
+        git clone "$destination_repo_1" destination_1
+        cp -r * destination_1/
+        cd destination_1
+        git add .
+        git commit -m "Automated update from source repository"
+        git push origin main
