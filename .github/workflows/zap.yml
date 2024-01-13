@@ -5,8 +5,8 @@ on: [push]
 jobs:
   analyze:
     name: Analyze
-    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
-    timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
+    runs-on: ubuntu-latest  # Change runs-on to always use Ubuntu latest
+    timeout-minutes: 240    # Adjust the timeout as needed
     permissions:
       actions: read
       contents: read
