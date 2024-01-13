@@ -5,8 +5,8 @@ on: [push]
 jobs:
   analyze:
     name: Analyze
-    runs-on: ubuntu-latest  # Change runs-on to always use Ubuntu latest
-    timeout-minutes: 240    # Adjust the timeout as needed
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
     permissions:
       actions: read
       contents: read
