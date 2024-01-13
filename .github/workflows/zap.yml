@@ -1,32 +1,17 @@
 name: OWASP ZAP Integration with GitHub Actions
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-permissions: write-all
+on: [push]
 
 jobs:
-  DAST-testing-with-OWASP-ZAP:
+  zap_scan:
     runs-on: ubuntu-latest
+    name: Scan the webapplication
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          ref: "main"
-         
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.12
-
+          ref: main
       - name: ZAP Scan
-        uses: zaproxy/action-full-scan@v0.7.0
+        uses: zaproxy/action-full-scan@v0.8.0
         with:
-         target: 'http://127.0.0.1:8081'
-         artifact_name: 'DAST-results-zap_scan'
-         
-      - name : Exit ZAP
-        run: exit 0
+          target: 'https://github.com/PD-NET/Devnew/'
