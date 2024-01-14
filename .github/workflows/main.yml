@@ -37,3 +37,23 @@ jobs:
           destination_repo: 'PD-NET/testnew'
           user_email: 'eng21ct0006@dsu.edu.in'
           user_name: 'Gaurang-dsu'
+
+      - name: client
+        uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
+        env:
+         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
+        with:
+          source_file: 'client/'
+          destination_repo: 'PD-NET/testnew'
+          user_email: 'eng21ct0006@dsu.edu.in'
+          user_name: 'Gaurang-dsu' 
+
+      - name: .github/workflows
+        uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
+        env:
+         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
+        with:
+          source_file: '.github/workflows/'
+          destination_repo: 'PD-NET/testnew'
+          user_email: 'eng21ct0006@dsu.edu.in'
+          user_name: 'Gaurang-dsu'
