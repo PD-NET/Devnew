@@ -19,4 +19,4 @@ jobs:
         python-version: 3.11.7
 
     - name: Run Python script
-      run: security.py
+      run: python security.py
