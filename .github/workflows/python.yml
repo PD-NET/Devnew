@@ -2,32 +2,36 @@ name: ZAP Scan
 
 on:
   push:
-    branches:
-      - main
-      
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions: write-all
+
 jobs:
-  scan:
+  DAST-testing-with-OWASP-ZAP:
     runs-on: ubuntu-latest
-
-    env:
-      TARGET_URL: ${{ secrets.TARGET_URL }}
-      ZAP_API_KEY: ${{ secrets.ZAP_API_KEY }}
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-      
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.11.7
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: "main"
+         
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.12
 
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-        
-    - name: Run ZAP Scan
-      run: python security.py
-      env:
-        TARGET_URL: ${{ env.TARGET_URL }}
-        ZAP_API_KEY: ${{ env.ZAP_API_KEY }}
+      - name: Install dependencies
+        run: |
+          sudo pip install -r requirements.txt
+          sudo python security.py &
+
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.7.0
+        with:
+         target: 'http://localhost:8081/'
+         artifact_name: 'DAST-results-zap_scan'
+         
+      - name : Exit ZAP
+        run: exit 0
