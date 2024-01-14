@@ -24,7 +24,7 @@ jobs:
          API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
         with:
           source_file: '.vscode/'
-          destination_repo: 'PD-NET/test'
+          destination_repo: 'PD-NET/testnew'
           user_email: 'eng21ct0006@dsu.edu.in'
           user_name: 'Gaurang-dsu'
 
@@ -34,6 +34,6 @@ jobs:
          API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
         with:
           source_file: 'node_modules/'
-          destination_repo: 'PD-NET/test'
+          destination_repo: 'PD-NET/testnew'
           user_email: 'eng21ct0006@dsu.edu.in'
           user_name: 'Gaurang-dsu'
