@@ -22,29 +22,27 @@ jobs:
         env:
          API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
         with:
-          source_file: 'client'
+          source_file: 'client/'
           destination_repo: 'PD-NET/test'
           user_email: 'eng21ct0006@dsu.edu.in'
           user_name: 'Gaurang-dsu'
-            
+
       - name: .vscode
         uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
         env:
          API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
         with:
-          source_file: '.vscode'
+          source_file: '.vscode/'
           destination_repo: 'PD-NET/test'
           user_email: 'eng21ct0006@dsu.edu.in'
           user_name: 'Gaurang-dsu'
-          
+
       - name: node_modules
         uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
         env:
          API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
         with:
-          source_file: 'node_modules'
+          source_file: 'node_modules/'
           destination_repo: 'PD-NET/test'
           user_email: 'eng21ct0006@dsu.edu.in'
           user_name: 'Gaurang-dsu'
-
-     
