@@ -7,12 +7,13 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
 
-permissions: write all
+
 
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
     name: zap_scan
+    permissions: write all
     steps:
       - name: Checkout
         uses: actions/checkout@v3
