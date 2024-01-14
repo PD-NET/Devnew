@@ -1,18 +1,22 @@
-name: Run Python Script
+name: ZAP Scan
 
 on:
   push:
     branches:
       - main
-
+      
 jobs:
-  run_python_script:
+  scan:
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    env:
+      TARGET_URL: ${{ secrets.TARGET_URL }}
+      ZAP_API_KEY: ${{ secrets.ZAP_API_KEY }}
 
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -21,6 +25,9 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-
-    - name: Run Python script
+        
+    - name: Run ZAP Scan
       run: python security.py
+      env:
+        TARGET_URL: ${{ env.TARGET_URL }}
+        ZAP_API_KEY: ${{ env.ZAP_API_KEY }}
