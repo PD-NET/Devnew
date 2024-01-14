@@ -4,7 +4,7 @@ import requests
 from zapv2 import ZAPv2
 
 # Proxy configuration
-proxy_url = os.getenv('HTTP_PROXY', 'http://localhost:8081/')  # Update with your proxy URL
+proxy_url = os.getenv('HTTP_PROXY', 'http://localhost:8080/')  # Update with your proxy URL
 proxies = {'http': proxy_url}
 
 print(f"Attempting to connect to the proxy: {proxy_url}")
