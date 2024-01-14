@@ -12,12 +12,12 @@ jobs:
     name: zap_scan
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: main
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.8.0
         with:
-          token: ${{ secrets.HTOKEN }}
           target: 'http://pd-net-prod-main-1518350640.us-east-1.elb.amazonaws.com/'
           cmd_options: '-a'
+          artifact_name: 'DAST-results-zap_scan'
