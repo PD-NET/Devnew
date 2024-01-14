@@ -26,5 +26,5 @@ jobs:
         uses: zaproxy/action-full-scan@v0.8.0
         with:
           target: 'http://pd-net-prod-main-1518350640.us-east-1.elb.amazonaws.com/'
-          cmd_options: '-a'
+          cmd_options: '-c'
           artifact_name: 'DAST-results-zap_scan'
