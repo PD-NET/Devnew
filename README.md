@@ -15,9 +15,6 @@
  THE WORK FLOW SMOOTHLY EVERYTHING TO DONE IN THE WEBSITE WHICH WOULD LINKED TO THEIR COLLEGE ID'S AND IT WOULD LIKE SIMILAR TO GITHUB VERSION CONTROL .
 
  ## CICD PIPELINE
- - **FLOWCHART**
-   https://lucid.app/lucidchart/6281b4e7-12d7-42a3-9ce2-b2aa875c7ce0/edit?invitationId=inv_14333978-e247-4df0-be74-979615fd9b7f&page=0_0#
-
   The university dissertation or thesis project described here provides students with a remarkable opportunity for autonomy and self-driven learning. Within a two-year timeframe, students select their own research    question or proposition, accompanied by the support of a mentor for guidance and addressing queries along the way. This project holds significant weight in the assessment process, contributing to their final        grades, and serves as a test of their independent research skills developed during their university years. Although some guidance is available from tutors, the emphasis lies on the students' ability to conduct      original research and produce a substantial academic work. It's a formidable undertaking, requiring months of preparation and dedication. The key advice is to select a subject of genuine interest, making the        arduous journey more rewarding
    FURTHER CICD PIPELINE EXPLAINED.
 
