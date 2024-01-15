@@ -1,9 +1,4 @@
-## PD
-
-#HELLO
-
-##  PROBLEM STATEMENT 
- **PG DISSERTATION MANAGEMENT SYSTEM DESCRIPTION**
+                                                                              **PG DISSERTATION MANAGEMENT SYSTEM DESCRIPTION**
  -PROBLEM STATEMENT
   PG dissertation is the partial requirement for the fulfillment of Pg degree. During 1st year of post graduation, student select PG dissertation topic and carry out research under supervision of PG guide and     
   submit dissertation during final year of evaluation. The following are the major steps of the dissertation: Selection of topics: 
