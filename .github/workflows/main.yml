@@ -1,36 +1,60 @@
-name: CI pipeline
+name: Push to Another Repository
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+    branches:
+      - main  # Replace with the source branch you want to trigger the workflow
 permissions: write-all
-
 jobs:
-           
-  push-dev-to-test-repo:
-   
+  push_code_from_test_to_prod:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-      with:
-        repository: 'PD-NET/test'
-        ref: main-test
-        token: ${{ secrets.PAT_ACCESS_KEY }}
+    permissions:
+      contents: write
+      packages: write
+      pages: write 
 
-    - name: Add dev repo and pull to test repo
-      run: |
-        
-        git remote add dev https://github.com/PD-NET/Devnew.git
-        git remote -v
-        git branch -a
-        git config user.name Gaurang-dsu
-        git config user.email eng21ct0006@dsu.edu.in
-        
-        git pull dev main
-        #We use pull here to pull to the local system but when we need to push it to the remote repo ,we use push
-        #hence pull and push is used here
-        git push 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       
+     
+      - name: .vscode
+        uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
+        env:
+         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
+        with:
+          source_file: '.vscode/'
+          destination_repo: 'PD-NET/test'
+          user_email: 'eng21ct0006@dsu.edu.in'
+          user_name: 'Gaurang-dsu'
+
+      - name: node_modules
+        uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
+        env:
+         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
+        with:
+          source_file: 'node_modules/'
+          destination_repo: 'PD-NET/test'
+          user_email: 'eng21ct0006@dsu.edu.in'
+          user_name: 'Gaurang-dsu'
+
+      - name: client
+        uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
+        env:
+         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
+        with:
+          source_file: 'client/'
+          destination_repo: 'PD-NET/test'
+          user_email: 'eng21ct0006@dsu.edu.in'
+          user_name: 'Gaurang-dsu' 
+
+
+      - name: README.md
+        uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
+        env:
+         API_TOKEN_GITHUB: ${{ secrets.PAT_ACCESS_KEY }} # Use the correct environment variable name
+        with:
+          source_file: 'README.md'
+          destination_repo: 'PD-NET/test'
+          user_email: 'eng21ct0006@dsu.edu.in'
+          user_name: 'Gaurang-dsu'
