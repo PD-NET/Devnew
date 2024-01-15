@@ -1,4 +1,4 @@
-**PG DISSERTATION MANAGEMENT SYSTEM DESCRIPTION**
+## PG DISSERTATION MANAGEMENT SYSTEM DESCRIPTION
  
   PG dissertation is the partial requirement for the fulfillment of Pg degree. During 1st year of post graduation, student select PG dissertation topic and carry out research under supervision of PG guide and     
   submit dissertation during final year of evaluation. The following are the major steps of the dissertation: Selection of topics: 
@@ -13,7 +13,7 @@
   9. Managing and monitoring all the above aspects throughout the country maybe a herculean task.
   10. An application to ease the process and improve the quality of research is essential.
       
--APPROACH:
+## APPROACH:
 
  OUR IDEA IS TO BUILD A WEBSITE UNDER MINISTRY OF AYUSH WHICH WOULD HELP STUDENTS TO WORK ON THEIR RESPECTIVE PAPERS,WHERE THE STUDENTS WOULD CHOOSE THEIR PAPER TOPIC AND UNDER THE SUPERVISION OF  THE RESPECTED ASSIGEND MENTORS ABOUT THEIR PROJECT AND CONTINUE THE WORKFLOW SMOOTHLY. EVERYTHING TO DONE IN THE WEBSITE WHICH WOULD LINKED TO THEIR COLLEGE ID'S.
 
