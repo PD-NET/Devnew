@@ -2,8 +2,8 @@
 [![DAST: WAPITI](https://img.shields.io/badge/DAST-WAPITI-indigo.svg)](https://github.com/wapiti-scanner/wapiti)
 [![Functional Testing: Selenium](https://img.shields.io/badge/:Functional_Testing-Selenium-blue.svg)](https://github.com/SeleniumHQ/selenium)
 [![Dynamic Testing: Code_Coverage](https://img.shields.io/badge/:Dynamic_Testing-Code_Coverage-green.svg)](https://github.com/marketplace/codecov)
-[![Container: Docker](https://img.shields.io/badge/:Container-Docker-yellow.svg)](https://github.com/hashicorp/terraform)
-[![IAC: Terraform](https://img.shields.io/badge/:IAC-Terraform-orange.svg)](https://github.com/docker/getting-started)
+[![Container: Docker](https://img.shields.io/badge/:Container-Docker-yellow.svg)](https://github.com/docker/getting-started)
+[![IAC: Terraform](https://img.shields.io/badge/:IAC-Terraform-orange.svg)](https://github.com/hashicorp/terraform))
 
 ## PG DISSERTATION MANAGEMENT SYSTEM DESCRIPTION
  
