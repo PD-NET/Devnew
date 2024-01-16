@@ -1,9 +1,9 @@
-[![SAST CODEQL](https://img.shields.io/badge/SAST-CODEQL-yellow.svg)](https://github.com/github/codeql)
-[![DAST: WAPITI](https://img.shields.io/badge/DAST-WAPITI-orange.svg)](https://github.com/wapiti-scanner/wapiti)
+[![SAST CODEQL](https://img.shields.io/badge/SAST-CODEQL-voilet.svg)](https://github.com/github/codeql)
+[![DAST: WAPITI](https://img.shields.io/badge/DAST-WAPITI-indigo.svg)](https://github.com/wapiti-scanner/wapiti)
 [![Functional Testing: Selenium](https://img.shields.io/badge/:Functional_Testing-Selenium-blue.svg)](https://github.com/SeleniumHQ/selenium)
 [![Dynamic Testing: Code_Coverage](https://img.shields.io/badge/:Dynamic_Testing-Code_Coverage-green.svg)](https://github.com/marketplace/codecov)
-[![IAC: Terraform](https://img.shields.io/badge/:IAC-Terraform-purple.svg)](https://github.com/hashicorp/terraform)
-
+[![Container: Docker](https://img.shields.io/badge/:Container-Docker-yellow.svg)](https://github.com/hashicorp/terraform)
+[![IAC: Terraform](https://img.shields.io/badge/:IAC-Terraform-orange.svg)](https://github.com/docker/getting-started)
 
 ## PG DISSERTATION MANAGEMENT SYSTEM DESCRIPTION
  
