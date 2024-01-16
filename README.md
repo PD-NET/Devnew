@@ -1,4 +1,4 @@
-[![SAST CODEQL](https://img.shields.io/badge/SAST-CODEQL-yellow.svg)](https://github.com/PyCQA/codeql)
+[![SAST CODEQL](https://img.shields.io/badge/SAST-CODEQL-yellow.svg)](https://github.com/github/codeql)
 [![DAST: WAPITI](https://img.shields.io/badge/DAST-WAPITI-orange.svg)](https://github.com/wapiti-scanner/wapiti)
 [![Functional Testing: Selenium](https://img.shields.io/badge/:Functional_Testing-Selenium-blue.svg)](https://github.com/SeleniumHQ/selenium)
 [![Dynamic Testing: Code_Coverage](https://img.shields.io/badge/:Dynamic_Testing-Code_Coverage-green.svg)](https://github.com/marketplace/codecov)
