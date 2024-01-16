@@ -23,8 +23,9 @@
       
 ## APPROACH:
 
- OUR IDEA IS TO BUILD A WEBSITE UNDER MINISTRY OF AYUSH WHICH WOULD HELP STUDENTS TO WORK ON THEIR RESPECTIVE PAPERS,WHERE THE STUDENTS WOULD CHOOSE THEIR PAPER TOPIC AND UNDER THE SUPERVISION OF  THE RESPECTED ASSIGEND MENTORS ABOUT THEIR PROJECT AND CONTINUE THE WORKFLOW SMOOTHLY. EVERYTHING TO DONE IN THE WEBSITE WHICH WOULD LINKED TO THEIR COLLEGE ID'S.
+ Our idea is to build a website under Ministry of Ayush which would help students to work on their respective papers,where the students would choose their paper topic and under the supervision of  the respected assigend mentors about their project and continue the workflow smoothly everything to done in the website which would linked to their college credentials.
 
+ 
  ## ABOUT THE DISSERTATION MANAGEMENT SYSTEM
   The university dissertation or thesis project described here provides students with a remarkable opportunity for autonomy and self-driven learning. Within a two-year timeframe, students select their own research    question or proposition, accompanied by the support of a mentor for guidance and addressing queries along the way. This project holds significant weight in the assessment process, contributing to their final        grades, and serves as a test of their independent research skills developed during their university years. Although some guidance is available from tutors, the emphasis lies on the students' ability to conduct      original research and produce a substantial academic work. It's a formidable undertaking, requiring months of preparation and dedication. The key advice is to select a subject of genuine interest, making the        arduous journey more rewarding.
 
@@ -49,8 +50,7 @@ graph LR;
 ```
 
 ## WEBSITE SNAPSHOTS
-
-
+    
 
  ## Flowchart
 
