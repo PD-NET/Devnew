@@ -1,0 +1,60 @@
+name: "Security"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  CodeQL:
+    # Runner size impacts CodeQL analysis time. To learn more, please see:
+    #   - https://gh.io/recommended-hardware-resources-for-running-codeql
+    #   - https://gh.io/supported-runners-and-hardware-resources
+    #   - https://gh.io/using-larger-runners
+    # Consider using larger runners for possible analysis time improvements.
+    runs-on: ubuntu-latest
+    permissions:
+      # required for all workflows
+      security-events: write
+
+      # only required for workflows in private repositories
+      actions: read
+      contents: read
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: ${{ matrix.language }}
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+      with:
+        category: "/language:${{matrix.language}}"
+
+  wapiti-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Run Wapiti Scan
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wapiti
+
+
+      - name: Run Wapiti scan
+        run: |
+         wapiti -u http://pd-net-prod-main-1154509397.us-east-1.elb.amazonaws.com/ -o wapiti-report.html
+
+
+      - name: Upload Wapiti Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: wapiti-report
+          path: wapiti-report.html
