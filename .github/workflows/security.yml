@@ -50,7 +50,7 @@ jobs:
 
       - name: Run Wapiti scan
         run: |
-         wapiti -u http://pd-net-prod-main-1518350640.us-east-1.elb.amazonaws.com/ -o wapiti-report.html
+         wapiti -u http://pd-net-prod-main-1154509397.us-east-1.elb.amazonaws.com/ -o wapiti-report.html
 
 
       - name: Upload Wapiti Report
