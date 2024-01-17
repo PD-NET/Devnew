@@ -29,7 +29,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.32/moment-timezone.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="js/login.js"></script>
+    
     <style>
         /* Add background image to the left half of the body */
         body {
@@ -85,17 +85,17 @@
         <div class="row justify-content-center">
             <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-5">
                 <div class="login-form">
-                    <form name="loginForm" id="loginForm" novalidate="novalidate">
+                    <form name="loginForm" id="loginForm" novalidate="novalidate" action="login.php" method="POST">
                         <div class="control-group">
                             <!-- Logo added here -->
                             <div class="login-logo">
                                 <img src="image/logo1.png" alt="Net Surfers Logo">
                             </div>
-                            <input type="text" class="form-control p-4" id="username" placeholder="Username" required="required" data-validation-required-message="Please enter your username" />
+                            <input type="text" class="form-control p-4" id="username" name="username" placeholder="Username" required="required" data-validation-required-message="Please enter your username" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="password" class="form-control p-4" id="password" placeholder="Password" required="required" data-validation-required-message="Please enter your password" />
+                            <input type="password" class="form-control p-4" id="password" name="password" placeholder="Password" required="required" data-validation-required-message="Please enter your password" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div>

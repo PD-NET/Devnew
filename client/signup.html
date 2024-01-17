@@ -22,10 +22,9 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- Custom Sign Up Page CSS -->
     <link href="css/signup-style.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+   
+    
     <!-- JavaScript to Redirect to Dashboard -->
-    <script src="js/signup.js"></script>
     <style>
         /* Add background image to the left half of the body */
         body {
@@ -89,26 +88,26 @@
         <div class="row justify-content-center">
             <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-5">
                 <div class="signup-form">
-                    <form name="signupForm" id="signupForm" novalidate="novalidate">
+                    <form name="signupForm" id="signupForm" novalidate="novalidate" action="signup.php" method="POST">
                         <div class="control-group">
                             <!-- Logo added here -->
                             <div class="signup-logo">
                                 <img src="image/logo1.png" alt="Net Surfers Logo">
                             </div>
-                            <input type="text" class="form-control p-4" id="fullname" placeholder="Full Name" required="required" data-validation-required-message="Please enter your full name" />
+                            <input type="text" class="form-control p-4" name="fullname" id="fullname" placeholder="Full Name" required="required" data-validation-required-message="Please enter your full name" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control p-4" id="new-username" placeholder="Username" required="required" data-validation-required-message="Please enter your username" />
+                            <input type="text" class="form-control p-4" name="new-username" id="new-username" placeholder="Username" required="required" data-validation-required-message="Please enter your username" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="email" class="form-control p-4" id="new-email" placeholder="Email" required="required" data-validation-required-message="Please enter your email" />
+                            <input type="email" class="form-control p-4" name="new-email" id="new-email" placeholder="Email" required="required" data-validation-required-message="Please enter your email" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <!-- Password Field -->
                         <div class="control-group">
-                            <input type="password" class="form-control p-4" id="new-password" placeholder="Password" required="required" data-validation-required-message="Please enter your password" />
+                            <input type="password" class="form-control p-4" name="new-password" id="new-password" placeholder="Password" required="required" data-validation-required-message="Please enter your password" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <!-- Course Selection -->
@@ -141,14 +140,8 @@
     <!-- Sign Up End -->
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <!-- JavaScript to Redirect to Dashboard -->
-    <script>
-        function redirectToDashboard() {
-            window.location.href = "index.html";
-        }
-    </script>
+
 </body>
 
 </html>
