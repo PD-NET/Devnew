@@ -77,9 +77,9 @@
     </header>
 
     <div class="container">
-        <h2></h2>
+        <h2>Provide Your Feedback</h2>
         <div id="feedbackFormContainer">
-            <form class="feedback-form" onsubmit="showMessage(); return false;">
+            <form class="feedback-form" onsubmit="showMessageAndRedirect(); return false;">
                 <div class="form-group">
                     <label for="name">Your Name:</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -103,12 +103,17 @@
     </div>
 
     <script>
-        function showMessage() {
+        function showMessageAndRedirect() {
             // Hide the form container
             document.getElementById("feedbackFormContainer").style.display = "none";
 
             // Display the success message
             document.getElementById("successMessage").style.display = "block";
+
+            // Redirect after a 3-second delay
+            setTimeout(function() {
+                window.location.href = "index.php";
+            }, 3000);
         }
     </script>
 </body>

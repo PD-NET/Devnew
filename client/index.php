@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+} else {
+    echo "Username not set in session.";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -125,7 +133,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="index.php" class="nav-item nav-link active">Home</a>
                     
                     <a href="fb.html" class="nav-item nav-link">Feedback</a>
                     <a href="cat2.html" class="nav-item nav-link">Category</a>
@@ -480,10 +488,37 @@
         <div class="col-lg-3 profile-container" style="background-color: #1b1b1c; border-radius: 10px; padding: 20px;">
             <h2 class="text-center mb-4" style="color: #ffa600;">PROFILE</h2>
             <!-- You can add user profile information here -->
-            <p><strong>Name:</strong> Sahana roy</p>
-            <p><strong>Email:</strong> sahanaroy@example.com</p>
+            <?php
+$conn = new mysqli("localhost", "root", "", "users");
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if the username is set in the session
+
+
+    $sql = "SELECT * FROM users where username='$username'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) 
+    {
+    // Output data of each row
+        while($row = $result->fetch_assoc()) 
+        {
+            echo "ID: " . $row["id"]. "<br>Name: " . $row["fullname"]. "<br>Email: " . $row["email"].  "<br>Category: " . $row["course"]."</p>";
+        }
+    } 
+    else 
+    {
+        echo "0 results";
+    }
+    // Close the database connection
+    $conn->close();
+?>
+
             <p><strong>Role:</strong> Student</p>
-            <p><strong>Topic:</strong> Neurology</p>
             <p><strong>Mentor:</strong> Dr. Esther Lal</p>
 
                <!-- Logout button to log the user out and redirect to the signup page -->

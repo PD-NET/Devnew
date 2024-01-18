@@ -14,33 +14,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["new-username"];
     $email = $_POST["new-email"];
     $password = password_hash($_POST["new-password"], PASSWORD_DEFAULT);
-    $course = $_POST["course"];
+    $course = mysqli_real_escape_string($conn, $_POST["course"]);
 
-    // Issue 1: SQL Injection Vulnerability - Use Prepared Statements
-    $sql = "INSERT INTO users (fullname, username, email, password, course) VALUES (?, ?, ?, ?, ?)";
-    
-    $stmt = $conn->prepare($sql);
+    // Insert data into the database
+    $sql = "INSERT INTO users (fullname, username, email, password, course) VALUES ('$fullname', '$username', '$email', '$password', '$course')";
 
-    // Bind parameters
-    $stmt->bind_param("sssss", $fullname, $username, $email, $password, $course);
-
-    // Execute the statement
-    if ($stmt->execute()) {
-        // Issue 2: Plain Text Password in JavaScript - Avoid displaying password
+    if ($conn->query($sql) === TRUE) {
         echo '<script type="text/javascript">
-                window.onload = function () { 
-                    alert("User Registered"); 
-                    // Issue 3: JavaScript Redirect Syntax - Use window.location.href
-                    window.location.href = "login.html"; 
-                }
-              </script>'; 
+       window.onload = function () { alert("User Registered");
+        onclick = location.href="login.html"; }
+        </script>'; 
+        
     } else {
-        // Issue 4: Limited Error Handling - Provide a generic error message
-        echo "Error: User registration failed. Please try again later.";
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-    // Close the statement and database connection
-    $stmt->close();
+    // Close the database connection
     $conn->close();
 }
 ?>
