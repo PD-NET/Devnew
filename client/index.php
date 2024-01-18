@@ -304,7 +304,7 @@ if (isset($_SESSION['username'])) {
 <div id="popupWindow" style="display: none; position: fixed; bottom: 300px; right: 500px; width: 600px; height: 300px; background-color: #fff; border: 1px solid #ccc; padding: 20px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">
     <h2>Popup Window Content</h2>
     <!-- Add your content here -->
-    <p>This is the content of the popup window.</p>
+    <p>Popup window.</p>
 
     <!-- Add Documents Button -->
     <button id="addDocumentsButton" style="background-color: #007bff; color: #fff; border: 1px solid #007bff; border-radius: 5px; padding: 10px;">
