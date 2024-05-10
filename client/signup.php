@@ -26,7 +26,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </script>'; 
         
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo '<script type="text/javascript">
+       window.onload = function () { console.log("Something went wrong");}
+        </script>'; 
+        echo "Test Error: " . $sql . "<br>" . $conn->error;
     }
 
     // Close the database connection

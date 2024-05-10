@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Net Surfers - Sign Up</title>
+    <title>Sign Up</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -17,131 +17,330 @@
     <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
     <!-- Libraries Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css"
+        rel="stylesheet" />
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <!-- Custom Sign Up Page CSS -->
     <link href="css/signup-style.css" rel="stylesheet">
-   
-    
+
+
     <!-- JavaScript to Redirect to Dashboard -->
     <style>
-        /* Add background image to the left half of the body */
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html,
         body {
-            background-image: url("image/bg1.jpg");
-            background-size: 65% 100%;
-            /* Cover only the left half */
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            display: grid;
+            height: 100%;
+            width: 100%;
+            place-items: center;
+            /*background-color: #8EC5FC;*/
+            background-image: url(image/p3.jpeg);
+        }
+
+        ::selection {
+            background: #f5ba5b;
+            color: #fff;
+        }
+
+        .wrapper {
+            overflow: hidden;
+            max-width: 475px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        .wrapper .title-text {
+            display: flex;
+            width: 200%;
+        }
+
+        .wrapper .title {
+            width: 50%;
+            font-size: 35px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .wrapper .slide-controls {
             position: relative;
+            display: flex;
+            height: 50px;
+            width: 100%;
+            overflow: hidden;
+            margin: 30px 0 10px 0;
+            justify-content: space-between;
+            border: 1px solid lightgrey;
+            border-radius: 15px;
         }
 
-        /* Adjust the position of the signup form on the right side */
-        .signup-form {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 150px;
+        .slide-controls .slide {
+            height: 100%;
+            width: 100%;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 48px;
+            cursor: pointer;
+            z-index: 1;
+            transition: all 0.6s ease;
+        }
+
+        .slide-controls label.signup {
+            color: #000;
+        }
+
+        .slide-controls .slider-tab {
             position: absolute;
-            top: 0%;
-            right: -85%;
-            transform: translate(0%, -50%);
-            width: 80%;
-            /* Adjust the width as needed */
-            box-shadow: 0px 0px 00px rgba(0, 0, 0, 0.2);
-            /* Add a shadow to the form */
+            height: 100%;
+            width: 50%;
+            left: 0;
+            z-index: 0;
+            border-radius: 15px;
+            background: -webkit-linear-gradient(left, #f5ba5b, #f5ba5b, #f5ba5b, #f5ba5b);
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
-        /* Center the signup form */
-        @media (max-width: 768px) {
-            .signup-logo img {
-                max-width: 80%;
-                /* Adjust the percentage as needed */
-            }
+        input[type="radio"] {
+            display: none;
         }
 
-        /* Reduce the size of the logo */
-        .signup-logo img {
-            max-width: 250px;
-            /* Adjust the maximum width for the logo */
-            height: 250%;
-            /* Automatically adjust the height to maintain aspect ratio */
+        #signup:checked~.slider-tab {
+            left: 50%;
         }
 
-        /* Increase space between logo and form fields */
-        .signup-logo {
-            margin-bottom: 0px;
+        #signup:checked~label.signup {
+            color: #fff;
+            cursor: default;
+            user-select: none;
         }
 
-        /* Style for subcategory labels */
-        .subcategory-label {
-            font-weight: bold;
+        #signup:checked~label.login {
+            color: #000;
         }
+
+        #login:checked~label.signup {
+            color: #000;
+        }
+
+        #login:checked~label.login {
+            cursor: default;
+            user-select: none;
+        }
+
+        .wrapper .form-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .form-container .form-inner {
+            display: flex;
+            width: 200%;
+        }
+
+        .form-container .form-inner form {
+            width: 50%;
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .form-inner form .field {
+            height: 50px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .form-inner form .field input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            padding-left: 15px;
+            border-radius: 15px;
+            border: 1px solid lightgrey;
+            border-bottom-width: 2px;
+            font-size: 17px;
+            transition: all 0.3s ease;
+        }
+
+        .form-inner form .field input:focus {
+            border-color: #f5ba5b;
+            /* box-shadow: inset 0 0 3px #fb6aae; */
+        }
+
+        .form-inner form .field input::placeholder {
+            color: #999;
+            transition: all 0.3s ease;
+        }
+
+        form .field input:focus::placeholder {
+            color: #f5ba5b;
+        }
+
+        .form-inner form .pass-link {
+            margin-top: 5px;
+        }
+
+        .form-inner form .signup-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .form-inner form .pass-link a,
+        .form-inner form .signup-link a {
+            color: #f5ba5b;
+            text-decoration: none;
+        }
+
+        .form-inner form .pass-link a:hover,
+        .form-inner form .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        form .btn {
+            height: 50px;
+            width: 100%;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        form .btn .btn-layer {
+            height: 100%;
+            width: 300%;
+            position: absolute;
+            left: -100%;
+            background: -webkit-linear-gradient(right, #f5ba5b, #f5ba5b, #f5ba5b, #f5ba5b);
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            ;
+        }
+
+        form .btn:hover .btn-layer {
+            left: 0;
+        }
+
+        form .btn input[type="submit"] {
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            position: relative;
+            background: none;
+            border: none;
+            color: #fff;
+            padding-left: 0;
+            border-radius: 15px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* Add background image to the left half of the body */
     </style>
 </head>
 
 <body>
-    <!-- Sign Up Start -->
-    <div class="container-fluid pt-5">
-        <div class="d-flex flex-column text-center mb-5 pt-5">
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">Signup Form</div>
+            <div class="title signup">Signup Form</div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-5">
-                <div class="signup-form">
-                    <form name="signupForm" id="signupForm" novalidate="novalidate" action="signup.php" method="POST">
-                        <div class="control-group">
-                            <!-- Logo added here -->
-                            <div class="signup-logo">
-                                <img src="image/logo1.png" alt="Net Surfers Logo">
-                            </div>
-                            <input type="text" class="form-control p-4" name="fullname" id="fullname" placeholder="Full Name" required="required" data-validation-required-message="Please enter your full name" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control p-4" name="new-username" id="new-username" placeholder="Username" required="required" data-validation-required-message="Please enter your username" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="email" class="form-control p-4" name="new-email" id="new-email" placeholder="Email" required="required" data-validation-required-message="Please enter your email" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <!-- Password Field -->
-                        <div class="control-group">
-                            <input type="password" class="form-control p-4" name="new-password" id="new-password" placeholder="Password" required="required" data-validation-required-message="Please enter your password" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <!-- Course Selection -->
-                        <div class="control-group">
-                            <label for="course" class="mb-2">Select a Course:</label>
-                            <select class="form-control" id="course" name="course">
-                                <option value="" disabled selected>Select a course</option>
-                                <optgroup label="Category 1">
-                                    <option value="course1">Child Health Care</option>
-                                    <option value="course2">Neurology</option>
-                                </optgroup>
-                                <optgroup label="Category 2">
-                                    <option value="course3">Hypertension</option>
-                                    <option value="course4">Post Menstrual Stress</option>
-                                </optgroup>
-                                <!-- Add more categories and courses as needed -->
-                            </select>
-                        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Resident</label>
+                <label for="signup" class="slide signup">Guide</label>
+                <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+                <form action="login.html" class="login">
+                    <div class="field">
+                        <input type="text" placeholder="Name" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="User Name" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Email Address" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="Confirm password" required>
+                    </div>
+                    <div class="field">
+                        <input type="Guide " placeholder="Enter the guide name" required>
+                    </div>
+                    <div class="field" style="width:100% ;">
+                        <select name="" id="">
+                            <option value="">Choose the article topic</option>
+                            <option value="">Non-small Cell Lung Cancer </option>
+                            <option value="">PCOS</option>
+                            <option value="">Neurology</option>
+                            <option value="">Prostate Cancer</option>
+                        </select>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Signup">
+                    </div>
+                    <div class="signup-link">Already have an account? <a href="login.html">Login</a></div>
+                </form>
+                <form action="login.html" class="signup">
+                    <div class="field">
+                        <input type="text" placeholder="Name" required>
+                    </div>
 
-                        <button class="btn btn-primary py-3 px-5" type="submit" id="signupButton">Sign Up</button>
-                        <!-- Login Option -->
-
-                        <p class="mt-3">Already have an account? <a href="login.html">Login</a></p>
-                    </form>
-
-                </div>
+                    <div class="field">
+                        <input type="text" placeholder="Email Address" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="Confirm password" required>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Signup">
+                    </div>
+                    <div class="signup-link">Already have an account? <a href="login.html">Login</a></div>
+                </form>
             </div>
         </div>
     </div>
-    <!-- Sign Up End -->
-
-    <!-- JavaScript Libraries -->
-    <!-- JavaScript to Redirect to Dashboard -->
-
+    <script>
+        const loginText = document.querySelector(".title-text .login");
+        const loginForm = document.querySelector("form.login");
+        const loginBtn = document.querySelector("label.login");
+        const signupBtn = document.querySelector("label.signup");
+        
+        signupBtn.onclick = (() => {
+            loginForm.style.marginLeft = "-50%";
+            loginText.style.marginLeft = "-50%";
+        });
+        loginBtn.onclick = (() => {
+            loginForm.style.marginLeft = "0%";
+            loginText.style.marginLeft = "0%";
+        });
+        signupLink.onclick = (() => {
+            signupBtn.click();
+            return false;
+        });
+    </script>
 </body>
 
 </html>
